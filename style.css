@@ -1,289 +1,565 @@
- @import url("https://use.typekit.net/rej7vfi.css");
+@import url("https://use.typekit.net/rej7vfi.css");
 
-.link-1{
-	color: white;
-}
+/* Desktop layout */
+@media only screen and (min-width: 600px){
+	.link-1{
+		color: white;
+	}
+	a.text:hover, a:visited{
+		background-color: lightblue;
+		mix-blend-mode: hard-light;
+		font-size: 2.2vmax;
+	}
+	a.image-hover:hover{
+		opacity: 0.5;
+	}
 
-/* Set up the animation */
+	a.important-quotes:hover{
+		background-color: #F686BD;
+		mix-blend-mode: hard-light;
+	}
 
-a.text:hover, a:visited{
-	background-color: lightblue;
-	mix-blend-mode: hard-light;
-	font-size: 2.2vmax;
-}
-a.image-hover:hover{
-	opacity: 0.5;
-}
+	a.feelings:hover{
+		background-color: #66A182;
+		mix-blend-mode: hard-light;
+	}
 
-a.important-quotes:hover{
-	background-color: #F686BD;
-	mix-blend-mode: hard-light;
-}
+	a.convo-a:hover{
+		background-color: #B6465F;
+		mix-blend-mode: hard-light;
+	}
 
-a.feelings:hover{
-	background-color: #66A182;
-	mix-blend-mode: hard-light;
-}
+	a.convo-b:hover{
+		background-color: #788BFF;
+		mix-blend-mode: hard-light;
+	}
 
-a.convo-a:hover{
-	background-color: #B6465F;
-	mix-blend-mode: hard-light;
-}
+	.homepage-background{
+		height: 100%;
+		background-image: url("homepage-pics/baby_blue.gif");
+	  	background-repeat: repeat;
+	  	background-size: 25%;
+	  	mix-blend-mode: hard-light;
+	  	display: grid;
+		height: 100vh;
+		width: 100vw;
+		grid-template-columns: repeat(10, 1fr);
+		grid-template-rows: repeat(10, 1fr);
+	}
 
-a.convo-b:hover{
-	background-color: #788BFF;
-	mix-blend-mode: hard-light;
-}
+	.intro-text {
+		display: flex;
+		flex-wrap: wrap;
+		align-content: center;
+		font-family: "p22-typewriter", sans-serif;
+		background-color: rgba(62, 31, 71, 0.8);
+		color: #FFFFFF;
+		font-size: 2vmax;
+		padding: 3%;
+		grid-column: 2/8;
+		grid-row: 3/8;
+	}
 
-.homepage-background{
-	height: 100%;
-	background-image: url("homepage-pics/baby_blue.gif");
-  	background-repeat: repeat;
-  	background-size: 25%;
-  	mix-blend-mode: hard-light;
-  	display: grid;
-	height: 100vh;
-	width: 100vw;
-	grid-template-columns: repeat(10, 1fr);
-	grid-template-rows: repeat(10, 1fr);
-}
+	.author-text{
+		display: block;
+		color: #FFFFFF;
+		font-family: "p22-typewriter", sans-serif;
+		background-color: rgba(62, 31, 71, 0.8);
+		padding: 5%;
+		font-size: 3vmin;
+		grid-column: 6/8;
+		grid-row: 9;
+	}
 
-.intro-text {
-	display: flex;
-	flex-wrap: wrap;
-	align-content: center;
-	font-family: "p22-typewriter", sans-serif;
-	background-color: rgba(62, 31, 71, 0.8);
-	color: #FFFFFF;
-	font-size: 2vmax;
-	padding: 3%;
-	grid-column: 2/8;
-	grid-row: 3/8;
-}
+	.song{
+		display: grid;
+		grid-row: 9;
+		grid-column: 2;
+	}
 
-.author-text{
-	display: block;
-	color: #FFFFFF;
-	font-family: "p22-typewriter", sans-serif;
-	background-color: rgba(62, 31, 71, 0.8);
-	padding: 5%;
-	font-size: 3vmin;
-	grid-column: 6/8;
-	grid-row: 9;
-}
+	.morgan-grid-container{
+		background-image: url("morgan-pics/background-morgan.jpeg");
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		position: relative;
+	}
+	.morgan-poem-container{
+		display: grid;
+		z-index: 0;
+		grid-template-columns: 1fr 2fr 1fr;
+		font-family: "p22-typewriter", sans-serif;
+		font-size: 3vmin;
+		position: absolute;
+		color: ghostwhite;
+	}
 
-.song{
-	display: grid;
-	grid-row: 9;
-	grid-column: 2;
-}
+	.morgan-poem{
+		grid-column: 2;
+		grid-row: 2;
+		padding: 1em;
+		z-index: -1;
+	}
 
-.morgan-grid-container{
-	background-image: url("morgan-pics/background-morgan.jpeg");
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	position: relative;
-}
-.morgan-poem-container{
-	display: grid;
-	z-index: 0;
-	grid-template-columns: 1fr 2fr 1fr;
-	grid-template-rows: 10%;
-	font-family: "p22-typewriter", sans-serif;
-	font-size: 3vmin;
-	position: absolute;
-	color: ghostwhite;
-}
+	.image-container{
+		display: grid;
+		z-index: -1;
+		grid-template-columns: repeat(8, 12.5%);
+		grid-template-rows: repeat(5, 20%) ;
+		position: absolute;
+	}
 
-.morgan-poem{
-	grid-column: 2;
-	grid-row: 2;
-	padding: 1em;
-	z-index: -1;
-}
+	#morgan-1{
+		grid-column: 1;
+		grid-row: 3;
+		height: 50%;
+	}
 
-.image-container{
-	display: grid;
-	z-index: -1;
-	grid-template-columns: repeat(8, 12.5%);
-	grid-template-rows: repeat(5, 20%) ;
-	position: absolute;
-}
+	#morgan-2{
+		grid-column: 6;
+		grid-row: 4;
+		height: 50%;
+	}
 
-#morgan-1{
-	grid-column: 1;
-	grid-row: 3;
-	height: 100%;
-}
+	#morgan-3{
+		grid-column: 2;
+		grid-row: 2;
+		width: 50%;
+	}
 
-#morgan-2{
-	grid-column: 6;
-	grid-row: 4;
-	height: 100%;
-}
+	#morgan-4{
+		grid-column: 6;
+		grid-row: 2;
+		height: 100%;
+		transform: scaleX(-1);
+	}
+	#morgan-5{
+		grid-column: 2;
+		grid-row: 4;
+		width: 50%;
+	}
 
-#morgan-3{
-	grid-column: 2;
-	grid-row: 2;
-	width: 100%;
-}
+	.darwish-grid-container{
+		background-image: url("darwish-pics/pattern.jpeg");
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		position: relative;
+	}
 
-#morgan-4{
-	grid-column: 6;
-	grid-row: 2;
-	height: 100%;
-	transform: scaleX(-1);
-}
-#morgan-5{
-	grid-column: 2;
-	grid-row: 4;
-	width: 150%;
-}
+	.darwish-poem-container{
+		display: grid;
+		z-index: 0;
+		color: #221D18;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: 1fr 10fr 1fr;
+		grid-column-gap: 2vmin;
+		font-family: "p22-typewriter", sans-serif;
+		font-size: 2vmin;
+		position: absolute;
+	}
 
-.darwish-grid-container{
-	background-image: url("darwish-pics/pattern.jpeg");
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	position: relative;
-}
+	.darwish-poem-left{
+		background-color: #E4C8AF;
+		padding: 3%;
+		grid-row: 2;
+		grid-column: 1;
+	}
 
-.darwish-poem-container{
-	display: grid;
-	z-index: 0;
-	color: #221D18;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: 1fr 10fr 1fr;
-	grid-column-gap: 2vmin;
-	font-family: "p22-typewriter", sans-serif;
-	font-size: 2vmin;
-	position: absolute;
-}
+	.darwish-poem-right{
+		background-color: #E4C8AF;
+		padding: 3%;
+		grid-row: 2;
+		grid-column: 2;
+	}
 
-.darwish-poem-left{
-	background-color: #E4C8AF;
-	padding: 3%;
-	grid-row: 2;
-	grid-column: 1;
-}
+	.khalil-grid-container{
+		display: grid;
+		background-color: black;
+		background-image: 
+			radial-gradient(ellipse at top right, whitesmoke, transparent 40%),
+	  		radial-gradient(ellipse at bottom left, whitesmoke, transparent 40%);
+		grid-template-areas:
+			". khalil-title khalil-title khalil-title ."
+			"stanza-1 stanza-1 . . ."
+			"stanza-2 stanza-2 . . ."
+			"stanza-3 stanza-3 . . ."
+			"stanza-4 stanza-4 . . ."
+			"stanza-5 stanza-5 . . ."
+			". . . stanza-6 stanza-6"
+			". . . stanza-7 stanza-7"
+			". . . stanza-8 stanza-8"
+			". . . stanza-9 stanza-9"
+			". . . stanza-10 stanza-10"
+			". . . khalil-author falling";
+		grid-template-columns: repeat(5, 1fr);
+		grid-template-rows: repeat(13, 1fr);
+		font-family: "p22-typewriter", sans-serif;
+		padding: 1em;
+		color: ghostwhite;
+	}
 
-.darwish-poem-right{
-	background-color: #E4C8AF;
-	padding: 3%;
-	grid-row: 2;
-	grid-column: 2;
-}
+	.khalil-title{
+		grid-area: khalil-title;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-family: "p22-typewriter", sans-serif;
+		font-size: 4em;
+		color: #ebebeb;
+	}
+	.stanza-1{
+		grid-area: stanza-1;
+	}
+	.stanza-2{
+		grid-area: stanza-2;
+	}
+	.stanza-3{
+		grid-area: stanza-3;
+	}
+	.stanza-4{
+		grid-area: stanza-4;
+	}
+	.stanza-5{
+		grid-area: stanza-5;
+	}
+	.stanza-6{
+		grid-area: stanza-6;
+	}
+	.stanza-7{
+		grid-area: stanza-7;
+	}
+	.stanza-8{
+		grid-area: stanza-8;
+	}
+	.stanza-9{
+		grid-area: stanza-9;
+	}
+	.stanza-10{
+		grid-area: stanza-10;
+	}
+	.khalil-author{
+		grid-area: khalil-author;
+	}
+	.falling-img{
+		height: 50%;
+		width: 50%;
+		grid-area: falling;
+	}
 
-.khalil-grid-container{
-	display: grid;
-	background-color: black;
-	background-image: 
-		radial-gradient(ellipse at top right, whitesmoke, transparent 40%),
-  		radial-gradient(ellipse at bottom left, whitesmoke, transparent 40%);
-	grid-template-areas:
-		". khalil-title khalil-title khalil-title ."
-		"stanza-1 stanza-1 . . ."
-		"stanza-2 stanza-2 . . ."
-		"stanza-3 stanza-3 . . ."
-		"stanza-4 stanza-4 . . ."
-		"stanza-5 stanza-5 . . ."
-		". . . stanza-6 stanza-6"
-		". . . stanza-7 stanza-7"
-		". . . stanza-8 stanza-8"
-		". . . stanza-9 stanza-9"
-		". . . stanza-10 stanza-10"
-		". . . khalil-author falling";
-	grid-template-columns: repeat(5, 1fr);
-	grid-template-rows: repeat(13, 1fr);
-	font-family: "p22-typewriter", sans-serif;
-	padding: 1em;
-	color: ghostwhite;
-}
+	.last-page-container{
+		background-image: url("background-image.jpeg");
+		font-family: "p22-typewriter", sans-serif;
+		display: white;
+		font-size: 3em;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		position: relative;
 
-.khalil-title{
-	grid-area: khalil-title;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-family: "p22-typewriter", sans-serif;
-	font-size: 4em;
-	color: #ebebeb;
-}
-.stanza-1{
-	grid-area: stanza-1;
-}
-.stanza-2{
-	grid-area: stanza-2;
-}
-.stanza-3{
-	grid-area: stanza-3;
-}
-.stanza-4{
-	grid-area: stanza-4;
-}
-.stanza-5{
-	grid-area: stanza-5;
-}
-.stanza-6{
-	grid-area: stanza-6;
-}
-.stanza-7{
-	grid-area: stanza-7;
-}
-.stanza-8{
-	grid-area: stanza-8;
-}
-.stanza-9{
-	grid-area: stanza-9;
-}
-.stanza-10{
-	grid-area: stanza-10;
-}
-.khalil-author{
-	grid-area: khalil-author;
-}
-.falling-img{
-	height: 50%;
-	width: 50%;
-	grid-area: falling;
-}
+	}
 
-.last-page-container{
-	background-image: url("background-image.jpeg");
-	font-family: "p22-typewriter", sans-serif;
-	display: white;
-	font-size: 3em;
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	position: relative;
-
-}
-
-.last-page-text-container{
-	display: grid;
-	position: absolute;
-	grid-template-columns: repeat(2, 1fr);
+	.last-page-text-container{
+		display: grid;
+		position: absolute;
+		grid-template-columns: repeat(2, 1fr);
 
 
+	}
+
+	.last-page-img-container{
+		display: grid;
+		position: absolute;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		grid-template-areas: 
+		". . ."
+		". lips ."
+		". . .";
+	}
+
+	.lips{
+		grid-area: lips;
+		height: 150%;
+	}
 }
+/* Phone layout */
+@media only screen and (max-width: 600px) {
+  .link-1{
+		color: white;
+	}
+	a.text:hover, a:visited{
+		background-color: lightblue;
+		mix-blend-mode: hard-light;
+		font-size: 3vmax;
+	}
+	a.image-hover:hover{
+		opacity: 0.5;
+	}
 
-.last-page-img-container{
-	display: grid;
-	position: absolute;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(3, 1fr);
-	grid-template-areas: 
-	". . ."
-	". lips ."
-	". . .";
+	a.important-quotes:hover{
+		background-color: #F686BD;
+		mix-blend-mode: hard-light;
+	}
+
+	a.feelings:hover{
+		background-color: #66A182;
+		mix-blend-mode: hard-light;
+	}
+
+	a.convo-a:hover{
+		background-color: #B6465F;
+		mix-blend-mode: hard-light;
+	}
+
+	a.convo-b:hover{
+		background-color: #788BFF;
+		mix-blend-mode: hard-light;
+	}
+
+	.homepage-background{
+		height: 100%;
+		background-image: url("homepage-pics/baby_blue.gif");
+	  	background-repeat: repeat;
+	  	background-size: 50%;
+	  	mix-blend-mode: hard-light;
+	  	display: grid;
+		height: 100vh;
+		width: 100vw;
+		grid-template-columns: repeat(5, 1fr);
+		grid-template-rows: repeat(5, 1fr);
+	}
+
+	.intro-text {
+		display: flex;
+		flex-wrap: wrap;
+		align-content: center;
+		font-family: "p22-typewriter", sans-serif;
+		background-color: rgba(62, 31, 71, 0.8);
+		color: #FFFFFF;
+		font-size: 3vmax;
+		padding: 3%;
+		grid-column: 1/5;
+		grid-row: 2/4;
+	}
+
+	.author-text{
+		display: block;
+		color: #FFFFFF;
+		font-family: "p22-typewriter", sans-serif;
+		background-color: rgba(62, 31, 71, 0.8);
+		padding: 5%;
+		font-size: 3vmin;
+		grid-column: 3/5;
+		grid-row: 5;
+	}
+
+	.song{
+		display: grid;
+		grid-row: 5;
+		grid-column: 1/2;
+	}
+
+	.morgan-grid-container{
+		background-image: url("morgan-pics/background-morgan.jpeg");
+		background-repeat: repeat;
+	  	background-size: 150%;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		position: relative;
+	}
+	.morgan-poem-container{
+		display: grid;
+		z-index: 0;
+		grid-template-columns: 1fr 3fr 1fr;
+		grid-template-rows: 10%;
+		font-family: "p22-typewriter", sans-serif;
+		font-size: 3vmin;
+		position: absolute;
+		color: ghostwhite;
+	}
+
+	.morgan-poem{
+		grid-column: 2;
+		grid-row: 1;
+		padding: 1em;
+		z-index: -1;
+	}
+
+	.image-container{
+		display: grid;
+		z-index: -1;
+		grid-template-columns: 5;
+		grid-template-rows: 6;
+		position: absolute;
+	}
+
+	#morgan-1{
+		grid-column: 1;
+		grid-row: 5;
+		height: 20%;
+	}
+
+	#morgan-2{
+		grid-column: 1;
+		grid-row: 4;
+		height: 20%;
+	}
+
+	#morgan-3{
+		grid-column: 1;
+		grid-row: 4;
+		width: 40%;
+	}
+
+	#morgan-4{
+		grid-column: 5;
+		grid-row: ;
+		height: 30%;
+		transform: scaleX(-1);
+	}
+	#morgan-5{
+		grid-column: 5;
+		grid-row: 4;
+		width: 20%;
+	}
+
+	.darwish-grid-container{
+		background-image: url("darwish-pics/pattern.jpeg");
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		position: relative;
+	}
+
+	.darwish-poem-container{
+		display: grid;
+		z-index: 0;
+		color: #221D18;
+		grid-template-columns: 1fr 3fr 1fr;
+		grid-column-gap: 2vmin;
+		font-family: "p22-typewriter", sans-serif;
+		font-size: 2vmin;
+		position: absolute;
+	}
+
+	.darwish-poem-left{
+		background-color: #E4C8AF;
+		padding: 3%;
+		grid-row: 1;
+		grid-column: 2;
+	}
+
+	.darwish-poem-right{
+		background-color: #E4C8AF;
+		padding: 3%;
+		grid-row: 2;
+		grid-column: 2;
+	}
+
+	.khalil-grid-container{
+		display: grid;
+		background-color: black;
+		background-image: 
+			radial-gradient(ellipse at top right, whitesmoke, transparent 40%),
+	  		radial-gradient(ellipse at bottom left, whitesmoke, transparent 40%);
+		grid-template-areas:
+			". khalil-title ."
+			". stanza-1 ."
+			". stanza-2 ."
+			". stanza-3 ."
+			". stanza-4 ."
+			". stanza-5 ."
+			". stanza-6 ."
+			". stanza-7 ."
+			". stanza-8 ."
+			". stanza-9 ."
+			". stanza-10 ."
+			". khalil-author ."
+			". falling .";
+		grid-template-columns: 1fr 2fr 1fr;
+		grid-template-rows: repeat(12, 1fr);
+		font-family: "p22-typewriter", sans-serif;
+		padding: 1em;
+		color: ghostwhite;
+	}
+
+	.khalil-title{
+		grid-area: khalil-title;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-family: "p22-typewriter", sans-serif;
+		font-size: 4em;
+		color: #ebebeb;
+	}
+	.stanza-1{
+		grid-area: stanza-1;
+	}
+	.stanza-2{
+		grid-area: stanza-2;
+	}
+	.stanza-3{
+		grid-area: stanza-3;
+	}
+	.stanza-4{
+		grid-area: stanza-4;
+	}
+	.stanza-5{
+		grid-area: stanza-5;
+	}
+	.stanza-6{
+		grid-area: stanza-6;
+	}
+	.stanza-7{
+		grid-area: stanza-7;
+	}
+	.stanza-8{
+		grid-area: stanza-8;
+	}
+	.stanza-9{
+		grid-area: stanza-9;
+	}
+	.stanza-10{
+		grid-area: stanza-10;
+	}
+	.khalil-author{
+		grid-area: khalil-author;
+	}
+	.falling-img{
+		height: 50%;
+		width: 50%;
+		grid-area: falling;
+	}
+
+	.last-page-container{
+		background-image: url("background-image.jpeg");
+		font-family: "p22-typewriter", sans-serif;
+		display: white;
+		font-size: 2em;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		position: relative;
+
+	}
+
+	.last-page-text-container{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
 
 
-}
+	}
 
-.lips{
-	grid-area: lips;
-	height: 150%;
+	.last-page-img-container{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.lips{
+		grid-area: lips;
+		height: 50%;
+	}
 }
 
 
